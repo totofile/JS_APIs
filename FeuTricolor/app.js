@@ -1,3 +1,4 @@
+// On récupère les ID des boutons et  feux de signalisation 
 const redbtn = document.querySelector("#redButton")
 const orangebtn = document.querySelector("#orangeButton")
 const greenbtn = document.querySelector("#greenButton")
@@ -8,8 +9,10 @@ const redLight = document.querySelector("#redLight")
 const orangeLight = document.querySelector("#orangeLight")
 const greenLight = document.querySelector("#greenLight")
 
+// Initialisation de variables pour les fonctions StopBlinkOrange et Stopauto
 blinkOrange2 = null
 auto2 = null
+
 // exercice 1 feu de signalisation allumer le bon feu en fonction du bouton de couleur cliqué
 redbtn.addEventListener("click", function TurnOnRed() {
     Stopauto()
@@ -45,27 +48,41 @@ greenbtn.addEventListener("click", function TurnOnRed() {
 
 // exercice 2 du feu de signalisation boutton off et feu orange clignoottant
 
+// On définit les classes CSS pour le feu orange allumé et éteint
 OrangeOn = "text-center my-1 bg-warning border border-dark rounded-circle"
-    OrangeOff = "text-center my-1 bg-dark border border-dark rounded-circle"
+OrangeOff = "text-center my-1 bg-dark border border-dark rounded-circle"
 
+// On définit la fonction pour faire clignoter le feu orange
 function blinkOrange (){
     orangeLight.className = orangeLight.className === OrangeOn ? 
     OrangeOff : OrangeOn
 }
 
+// On ajoute un événement au bouton off pour faire clignoter le feu orange
 offbtn.addEventListener("click", function(){
     orangebtn.click()
     blinkOrange2 = setInterval(blinkOrange, 1000)
     
 })
 
+// On définit la fonction pour arrêter le clignotement du feu orange
 function StopBlinkOrange() {
     clearInterval(blinkOrange2)
 }
+
 // exercice 3 feu de signalisation automatique
+
+// On définit une fonction pour faire une pause
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
+
+/**
+ * On définit une fonction pour allumer les feux de signalisation dans l'ordre
+ * @async
+ * @function auto
+ * @returns {Promise<void>}
+ */
 async function auto() {
     greenbtn.click()
     await sleep(3000)
@@ -76,12 +93,14 @@ async function auto() {
     
 }
 
+// On ajoute un événement au bouton auto pour lancer le feu de signalisation automatique
 autobtn.addEventListener("click", function () {
     Stopauto()
     auto()
     auto2 = setInterval(auto, 5000)
 })
 
+// On définit la fonction pour arrêter le feu de signalisation automatique
 function Stopauto() {
     clearInterval(auto2)
 }
