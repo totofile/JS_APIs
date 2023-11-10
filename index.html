@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Document</title>
+        
+</head>
+<body>
+    <p id="hello"  class="text-danger">hello world</p>
+    <p id="prototype" style="display: none;"> toto </p>
+
+    <div class="d-flex mt-5 justify-content-center">
+        <div class="p-0 justify-content-center">
+            <div class="d-flex flex-column mx-5 justify-content-center">
+                <div id="redLight" class="text-center my-1 bg-danger border border-dark rounded-circle " style="height: 100px;"></div>
+                <div id="orangeLight" class="text-center my-1 bg-warning border border-dark rounded-circle" style="height: 100px;"></div>
+                <div id="greenLight" class="text-center my-1 bg-success border border-dark rounded-circle" style="height: 100px;"></div>
+            </div>
+            <div class="mt-5 px-3 justify-content-between">
+                <button id="redButton" class="btn btn-primary bg-danger" style="height: 30px; width: 35px;"></button>
+                <button id="orangeButton" class="btn btn-primary bg-warning" style="height: 30px; width: 35px;"></button>
+                <button id="greenButton" class="btn btn-primary bg-success" style="height: 30px; width: 35px;"></button>
+                <button id="autoButton" class="btn btn-info" style="height: 30px;">Auto</button>
+                <button id="offButton" class="btn btn-info" style="height: 30px;">Off</button>
+            </div>
+        </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" src="./app.js" > </script>
+    <script src="./app.js"> </script>
+</body>
+</html>
