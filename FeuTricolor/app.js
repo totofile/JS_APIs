@@ -13,7 +13,7 @@ const greenLight = document.querySelector("#greenLight")
 blinkOrange2 = null
 auto2 = null
 
-// exercice 1 feu de signalisation allumer le bon feu en fonction du bouton de couleur cliqué
+// Exercice 1 feu de signalisation allumer le bon feu en fonction du bouton de couleur cliqué
 redbtn.addEventListener("click", function TurnOnRed() {
     Stopauto()
     StopBlinkOrange()
@@ -46,7 +46,7 @@ greenbtn.addEventListener("click", function TurnOnRed() {
     orangeLight.classList.replace('bg-warning', 'bg-dark')
 });
 
-// exercice 2 du feu de signalisation boutton off et feu orange clignoottant
+// Exercice 2 du feu de signalisation boutton off et feu orange clignoottant
 
 // On définit les classes CSS pour le feu orange allumé et éteint
 OrangeOn = "text-center my-1 bg-warning border border-dark rounded-circle"
@@ -70,7 +70,7 @@ function StopBlinkOrange() {
     clearInterval(blinkOrange2)
 }
 
-// exercice 3 feu de signalisation automatique
+// Exercice 3 feu de signalisation automatique
 
 // On définit une fonction pour faire une pause
 function sleep(ms) {
